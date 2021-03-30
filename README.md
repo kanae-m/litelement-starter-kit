@@ -48,7 +48,7 @@ npm test
 npm run serve
 ```
 
-`/dev/index.html`に開発HTMLファイルがあり、 http://localhost:8000/dev/index.html で表示できます。
+`/dev/index.html`に開発HTMLファイルがあり、 http://localhost:8000 で表示できます。
 
 ## Editing
 
