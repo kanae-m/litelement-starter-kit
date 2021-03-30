@@ -1,10 +1,10 @@
-# LitElement TypeScript starter 
+# LitElement TypeScript starter
 
-This project includes a sample component using LitElement with TypeScript.
+このプロジェクトには、TypeScriptでLitElementを使用するサンプルコンポーネントが含まれています。
 
 ## Setup
 
-Install dependencies:
+依存関係をインストール:
 
 ```bash
 npm i
@@ -12,27 +12,27 @@ npm i
 
 ## Build
 
-This sample uses the TypeScript compiler to produce JavaScript that runs in modern browsers.
+このサンプルでは、​​TypeScriptコンパイラを使用して、最新のブラウザで実行されるJavaScriptを生成します。
 
-To build the JavaScript version of your component:
+ビルド:
 
 ```bash
 npm run build
 ```
 
-To watch files and rebuild when the files are modified, run the following command in a separate shell:
+ファイルが変更されたときに再構築するビルド:
 
 ```bash
 npm run build:watch
 ```
 
-Both the TypeScript compiler and lit-analyzer are configured to be very strict. You may want to change `tsconfig.json` to make them less strict.
+TypeScriptコンパイラとlit-analyzerは、どちらも非常に厳密に構成されています。 `tsconfig.json`を変更して、厳密さを緩和することをお勧めします。
 
 ## Testing
 
-This sample uses Karma, Chai, Mocha, and the open-wc test helpers for testing. See the [open-wc testing documentation](https://open-wc.org/testing/testing.html) for more information.
+このサンプルでは、​​Karma、Chai、Mocha、およびopen-wcテストヘルパーをテストに使用します。詳細については、[open-wcテストのドキュメント](https://open-wc.org/testing/testing.html)を参照してください。
 
-Tests can be run with the `test` script:
+テスト実行:
 
 ```bash
 npm test
@@ -40,19 +40,20 @@ npm test
 
 ## Dev Server
 
-This sample uses open-wc's [es-dev-server](https://github.com/open-wc/open-wc/tree/master/packages/es-dev-server) for previewing the project without additional build steps. ES dev server handles resolving Node-style "bare" import specifiers, which aren't supported in browsers. It also automatically transpiles JavaScript and adds polyfills to support older browsers.
+このサンプルでは、​​open-wcの[es-dev-server](https://github.com/open-wc/open-wc/tree/master/packages/es-dev-server)を使用して、追加のビルド手順なしでプロジェクトをプレビューします。 ES開発サーバーは、ブラウザーでサポートされていないノードスタイルの"bare"インポート指定子の解決を処理します。また、JavaScriptを自動的に変換し、古いブラウザーをサポートするためにポリフィルを追加します。
 
-To run the dev server and open the project in a new browser tab:
+開発サーバーを実行:
 
 ```bash
 npm run serve
 ```
 
-There is a development HTML file located at `/dev/index.html` that you can view at http://localhost:8000/dev/index.html.
+`/dev/index.html`に開発HTMLファイルがあり、 http://localhost:8000/dev/index.html で表示できます。
 
 ## Editing
 
-If you use VS Code, we highly reccomend the [lit-plugin extension](https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin), which enables some extremely useful features for lit-html templates:
+VS Codeを使用する場合は、[lit-plugin拡張機能](https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin)を強くお勧めします。これにより、lit-htmlテンプレートで非常に便利な機能がいくつか有効になります。
+
   - Syntax highlighting
   - Type-checking
   - Code completion
@@ -60,16 +61,16 @@ If you use VS Code, we highly reccomend the [lit-plugin extension](https://marke
   - Jump to definition
   - Linting
   - Quick Fixes
-  
-  The project is setup to reccomend lit-plugin to VS Code users if they don't already have it installed.
+
+プロジェクトは、VS Codeユーザーがまだインストールしていない場合、lit-pluginを推奨するように設定されています。
 
 ## Linting
 
-Linting of TypeScript files is provided by [ESLint](eslint.org) and [TypeScript ESLint](https://github.com/typescript-eslint/typescript-eslint). In addition, [lit-analyzer](https://www.npmjs.com/package/lit-analyzer) is used to type-check and lint lit-html templates with the same engine and rules as lit-plugin.
+TypeScriptファイルのリンティングは、ESLintおよび[TypeScript ESLint](https://github.com/typescript-eslint/typescript-eslint)によって提供されます。さらに、[lit-analyzer](https://www.npmjs.com/package/lit-analyzer)は、lit-pluginと同じエンジンとルールでlit-htmlテンプレートのタイプチェックとリントを行うために使用されます。
 
-The rules are mostly the recommended rules from each project, but some have been turned off to make LitElement usage easier. The recommended rules are pretty strict, so you may want to relax them by editing `.eslintrc.json` and `tsconfig.json`.
+これらのルールは、ほとんどの場合、各プロジェクトで推奨されるルールですが、LitElementの使用を容易にするためにオフになっているものもあります。推奨されるルールはかなり厳格なので、`.eslintrc.json`と`tsconfig.json`を編集してルールを緩和することをお勧めします。
 
-To lint the project run:
+lint実行:
 
 ```bash
 npm run lint
@@ -77,42 +78,42 @@ npm run lint
 
 ## Formatting
 
-[Prettier](https://prettier.io/) is used for code formatting. It has been pre-configured according to the Polymer Project's style. You can change this in `.prettierrc.json`.
+[Prettier](https://prettier.io/)はコードのフォーマットに使用されます。これは、Polymer Projectのスタイルに従って事前構成されています。これは.`.prettierrc.json`で変更できます。
 
-Prettier has not been configured to run when commiting files, but this can be added with Husky and and `pretty-quick`. See the [prettier.io](https://prettier.io/) site for instructions.
+Prettierは、ファイルをコミットするときに実行するように構成されていませんが、これはHuskyおよびかなり迅速に追加できます。手順については、[prettier.io](https://prettier.io/)サイトを参照してください。
 
 ## Static Site
 
-This project includes a simple website generated with the [eleventy](11ty.dev) static site generator and the templates and pages in `/docs-src`. The site is generated to `/docs` and intended to be checked in so that GitHub pages can serve the site [from `/docs` on the master branch](https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+このプロジェクトには、11個の静的サイトジェネレーターで生成された単純なWebサイトと、`/docs-src`内のテンプレートとページが含まれています。サイトは`/docs`に生成され、GitHubページが[マスターブランチの`/docs`から](https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)サイトを提供できるようにチェックインすることを目的としています。
 
-To enable the site go to the GitHub settings and change the GitHub Pages &quot;Source&quot; setting to &quot;master branch /docs folder&quot;.</p>
+サイトを有効にするには、GitHub設定に移動し、GitHub Pagesの"Source"設定を"master branch /docs folder"に変更します。
 
-To build the site, run:
+サイトをビルドして実行:
 
 ```bash
 npm run docs
 ```
 
-To serve the site locally, run:
+サイトをローカルで提供:
 
 ```bash
 npm run docs:serve
 ```
 
-To watch the site files, and re-build automatically, run:
+実行(自動的に再構築):
 
 ```bash
 npm run docs:watch
 ```
 
-The site will usually be served at http://localhost:8000.
+このサイトは通常 http://localhost:8000 で提供されます。
 
 ## Bundling and minification
 
-This starter project doesn't include any build-time optimizations like bundling or minification. We recommend publishing components as unoptimized JavaScript modules, and performing build-time optimizations at the application level. This gives build tools the best chance to deduplicate code, remove dead code, and so on.
+このスタータープロジェクトには、バンドルやミニファイなどのビルド時の最適化は含まれていません。 コンポーネントを最適化されていないJavaScriptモジュールとして公開し、アプリケーションレベルでビルド時の最適化を実行することをお勧めします。 これにより、ビルドツールは、コードの重複排除、デッドコードの削除などを行うための最良の機会を得ることができます。
 
-For information on building application projects that include LitElement components, see [Build for production](https://lit-element.polymer-project.org/guide/build) on the LitElement site.
+LitElementコンポーネントを含むアプリケーションプロジェクトのビルドについては、LitElementサイトでの[本番用のビルド](https://lit-element.polymer-project.org/guide/build)を参照してください。
 
 ## More information
 
-See [Get started](https://lit-element.polymer-project.org/guide/start) on the LitElement site for more information.
+詳細については、LitElementサイトの[Get started](https://lit-element.polymer-project.org/guide/start)を参照してください。
